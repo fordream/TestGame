@@ -9,7 +9,7 @@
 #ifndef __TestGame__MainLayer__
 #define __TestGame__MainLayer__
 
-#include "CCBLoader.h"
+#include "CCBManage.h"
 #include "BaseLayer.h"
 #include "PopLayer.h"
 
@@ -27,9 +27,9 @@ public:
     
     ~MainLayer();
     
-    //CREATE_FUNC(MainLayer);
+    //virtual bool init();      //重写init函数
     
-    static MainLayer* load();
+    void show(CCLayer *target);
     
     virtual void onNodeLoaded(CCNode *pNode, CCNodeLoader *pNodeLoader);
     
@@ -37,12 +37,11 @@ public:
     
     void onClickMe(CCObject *pSender, CCControlEvent pCCControlEvent);         //Control类按钮执行函数
     
-    void onClose(CCObject *pSender, CCControlEvent pCCControlEvent);         //Control类按钮执行函数
-    
-    void callBackAnimationCompleted();
+    //void callBackAnimationCompleted();
     
 private:
-    CCNode *pPopLayer;
+    PopLayer *pPopLayer;
+    //CCLayer  *target;
     
 };
 

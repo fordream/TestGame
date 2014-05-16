@@ -228,10 +228,9 @@
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
 		C47741EF192306D100694FE4 /* PopLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = C47741EE192306D100694FE4 /* PopLayer.ccbi */; };
 		C47741F219231B8300694FE4 /* PopLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47741F019231B8300694FE4 /* PopLayer.cpp */; };
-		C47741F61923943A00694FE4 /* MaskLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47741F41923943A00694FE4 /* MaskLayer.cpp */; };
 		C478E1F51921EC4C009D8D12 /* ccbResources in Resources */ = {isa = PBXBuildFile; fileRef = C478E1F31921EC4C009D8D12 /* ccbResources */; };
 		C478E1F61921EC4C009D8D12 /* MainLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = C478E1F41921EC4C009D8D12 /* MainLayer.ccbi */; };
-		C478E1F91921EF81009D8D12 /* CCBLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C478E1F71921EF81009D8D12 /* CCBLoader.cpp */; };
+		C478E1F91921EF81009D8D12 /* CCBManage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C478E1F71921EF81009D8D12 /* CCBManage.cpp */; };
 		C478E1FC192222F2009D8D12 /* BaseLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C478E1FA192222F2009D8D12 /* BaseLayer.cpp */; };
 		C49F8EAF1921B909000C86E5 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C49F8EAD1921B909000C86E5 /* MainScene.cpp */; };
 		C49F8EB61921BF65000C86E5 /* MainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C49F8EB41921BF65000C86E5 /* MainLayer.cpp */; };
@@ -719,12 +718,10 @@
 		C47741EE192306D100694FE4 /* PopLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = PopLayer.ccbi; sourceTree = "<group>"; };
 		C47741F019231B8300694FE4 /* PopLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PopLayer.cpp; path = ../Classes/PopLayer.cpp; sourceTree = "<group>"; };
 		C47741F119231B8300694FE4 /* PopLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopLayer.h; path = ../Classes/PopLayer.h; sourceTree = "<group>"; };
-		C47741F41923943A00694FE4 /* MaskLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MaskLayer.cpp; sourceTree = "<group>"; };
-		C47741F51923943A00694FE4 /* MaskLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskLayer.h; sourceTree = "<group>"; };
 		C478E1F31921EC4C009D8D12 /* ccbResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ccbResources; sourceTree = "<group>"; };
 		C478E1F41921EC4C009D8D12 /* MainLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainLayer.ccbi; sourceTree = "<group>"; };
-		C478E1F71921EF81009D8D12 /* CCBLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCBLoader.cpp; path = ../Classes/CCBLoader.cpp; sourceTree = "<group>"; };
-		C478E1F81921EF81009D8D12 /* CCBLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBLoader.h; path = ../Classes/CCBLoader.h; sourceTree = "<group>"; };
+		C478E1F71921EF81009D8D12 /* CCBManage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCBManage.cpp; path = ../Classes/CCBManage.cpp; sourceTree = "<group>"; };
+		C478E1F81921EF81009D8D12 /* CCBManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBManage.h; path = ../Classes/CCBManage.h; sourceTree = "<group>"; };
 		C478E1FA192222F2009D8D12 /* BaseLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseLayer.cpp; sourceTree = "<group>"; };
 		C478E1FB192222F2009D8D12 /* BaseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLayer.h; sourceTree = "<group>"; };
 		C49F8EAD1921B909000C86E5 /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainScene.cpp; path = ../Classes/MainScene.cpp; sourceTree = "<group>"; };
@@ -1259,8 +1256,7 @@
 			children = (
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
-				C478E1F71921EF81009D8D12 /* CCBLoader.cpp */,
-				C478E1F81921EF81009D8D12 /* CCBLoader.h */,
+				C4C019141925AFA9000AC832 /* Manage */,
 				C49F8EB01921B910000C86E5 /* Scene */,
 				C49F8EB11921B918000C86E5 /* Layer */,
 			);
@@ -1747,10 +1743,17 @@
 				C478E1FB192222F2009D8D12 /* BaseLayer.h */,
 				C47741F019231B8300694FE4 /* PopLayer.cpp */,
 				C47741F119231B8300694FE4 /* PopLayer.h */,
-				C47741F41923943A00694FE4 /* MaskLayer.cpp */,
-				C47741F51923943A00694FE4 /* MaskLayer.h */,
 			);
 			name = Layer;
+			sourceTree = "<group>";
+		};
+		C4C019141925AFA9000AC832 /* Manage */ = {
+			isa = PBXGroup;
+			children = (
+				C478E1F71921EF81009D8D12 /* CCBManage.cpp */,
+				C478E1F81921EF81009D8D12 /* CCBManage.h */,
+			);
+			name = Manage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1922,7 +1925,7 @@
 				15A3DA331682F826002FB0C5 /* CCBKeyframe.cpp in Sources */,
 				15A3DA341682F826002FB0C5 /* CCBReader.cpp in Sources */,
 				15A3DA351682F826002FB0C5 /* CCBSequence.cpp in Sources */,
-				C478E1F91921EF81009D8D12 /* CCBLoader.cpp in Sources */,
+				C478E1F91921EF81009D8D12 /* CCBManage.cpp in Sources */,
 				15A3DA361682F826002FB0C5 /* CCBSequenceProperty.cpp in Sources */,
 				46513EB1187BFBA200B5ABE1 /* UITouchGroup.cpp in Sources */,
 				15A3DA371682F826002FB0C5 /* CCBValue.cpp in Sources */,
@@ -2039,7 +2042,6 @@
 				379BB9B917F03F3700829B88 /* UIHelper.cpp in Sources */,
 				379BB9BD17F03F3700829B88 /* UIListView.cpp in Sources */,
 				379BB9BE17F03F3700829B88 /* UIPageView.cpp in Sources */,
-				C47741F61923943A00694FE4 /* MaskLayer.cpp in Sources */,
 				379BB9BF17F03F3700829B88 /* UIScrollView.cpp in Sources */,
 				379BB9C017F03F3700829B88 /* UIButton.cpp in Sources */,
 				375BD50E1868454E0024609E /* CCActionEaseEx.cpp in Sources */,

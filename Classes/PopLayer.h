@@ -9,7 +9,7 @@
 #ifndef __TestGame__PopLayer__
 #define __TestGame__PopLayer__
 
-#include "CCBLoader.h"
+#include "CCBManage.h"
 #include "BaseLayer.h"
 
 
@@ -25,24 +25,22 @@ public:
     PopLayer();
     ~PopLayer();
     
-    //CREATE_FUNC(MainLayer);
-    
-    static PopLayer* load();
+    void show(CCLayer *target = NULL);
+    void hide();
     
     virtual void onNodeLoaded(CCNode *pNode, CCNodeLoader *pNodeLoader);
     virtual bool onAssignCCBMemberVariable(CCObject* pTarget, const char* pMemberVariableName, CCNode* pNode);   //重写ccbi文件成员对象绑定器
+    virtual SEL_CCControlHandler onResolveCCBCCControlSelector(CCObject * pTarget, const char* pSelectorName);   //重写Control类按钮回调函数绑定器
     
     virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
-//    virtual void ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent);
-//    virtual void ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent);
     
     void registerWithTouchDispatcher();
-    //virtual void ccTouchCancelled(CCTouch *pTouch, CCEvent *pEvent);
+    void callBackAnimationCompleted();
+    void onClose(CCObject *pSender, CCControlEvent pCCControlEvent);         //Control类按钮执行函数
 
 private:
-    CCLayerColor *mShowBox;
-    CCLayerColor *mMaskLayer;
     CCControl    *mCloseBtn;
+    CCLayer      *pTarget;
 };
 
 /* 声明节点注册器 */

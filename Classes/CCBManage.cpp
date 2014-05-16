@@ -6,9 +6,9 @@
 //
 //
 
-#include "CCBLoader.h"
+#include "CCBManage.h"
 
-CCNode *CCBLoader::loadCCB(const char * pCCBFileName, CCLayer * pCCLayer, const char * pCCNodeName, CCNodeLoader * pCCNodeLoader)
+CCNode *CCBManage::loadCCB(const char * pCCBFileName, CCLayer * pCCLayer, const char * pCCNodeName, CCNodeLoader * pCCNodeLoader)
 {
     /* Create an autorelease CCNodeLoaderLibrary. */
     CCNodeLoaderLibrary * ccNodeLoaderLibrary = CCNodeLoaderLibrary::newDefaultCCNodeLoaderLibrary();

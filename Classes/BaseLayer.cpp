@@ -8,6 +8,17 @@
 
 #include "BaseLayer.h"
 
+BaseLayer::BaseLayer()
+: mAnimationManager(NULL)
+{
+    
+}
+
+BaseLayer::~BaseLayer()
+{
+    CC_SAFE_RELEASE(mAnimationManager);
+}
+
 SEL_MenuHandler BaseLayer::onResolveCCBCCMenuItemSelector(CCObject * pTarget, const char* pSelectorName)       //重写Menu类按钮回调函数绑定器
 {
     //CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "onPressButton", MainScene::onMenuItemTest);   //设定Menu类按钮对应函数
@@ -35,4 +46,17 @@ bool BaseLayer::onAssignCCBMemberVariable(CCObject* pTarget, const char* pMember
 void BaseLayer::onNodeLoaded(CCNode *pNode, CCNodeLoader *pNodeLoader)                                         //重写ccbi加载完成状态监听器
 {
     
+}
+
+void BaseLayer::setAnimationManager(CCBAnimationManager *pAnimationManager)
+{
+    CCLog("reg animationManager");    //打印日志
+    CC_SAFE_RELEASE_NULL(mAnimationManager);   //释放内存
+    mAnimationManager = pAnimationManager;
+    CC_SAFE_RETAIN(mAnimationManager);    //保护内存
+}
+
+CCBAnimationManager* BaseLayer::getAnimationManager()
+{
+    return mAnimationManager;
 }

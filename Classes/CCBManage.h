@@ -15,7 +15,7 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
-class CCBLoader
+class CCBManage
 : public CCLayer
 {
 public:

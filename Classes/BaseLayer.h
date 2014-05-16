@@ -22,6 +22,10 @@ class BaseLayer
 , public cocos2d::extension::CCNodeLoaderListener       //继承节点加载监听类
 {
 public:
+    
+    BaseLayer();
+    ~BaseLayer();
+    
     virtual SEL_MenuHandler onResolveCCBCCMenuItemSelector(CCObject * pTarget, const char* pSelectorName);       //重写Menu类按钮回调函数绑定器
     
     virtual SEL_CCControlHandler onResolveCCBCCControlSelector(CCObject * pTarget, const char* pSelectorName);   //重写Control类按钮回调函数绑定器
@@ -37,6 +41,13 @@ public:
     void onBtnMeun(cocos2d::CCObject *pSender, cocos2d::extension::CCControlEvent pCCControlEvent);         //Control类按钮执行函数
     
     void onCallback(CCNode* sender);                                                                        //timeline 回调执行函数
+    
+    void setAnimationManager(CCBAnimationManager *pAnimationManager);
+    
+    CCBAnimationManager* getAnimationManager();
+    
+protected:
+    CCBAnimationManager *mAnimationManager;
 };
 
 #endif /* defined(__TestGame__BaseLayer__) */
