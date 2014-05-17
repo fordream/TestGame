@@ -44,10 +44,13 @@ public:
     
     void setAnimationManager(CCBAnimationManager *pAnimationManager);
     
+    //CCNode *load()
+    
     CCBAnimationManager* getAnimationManager();
     
 protected:
     CCBAnimationManager *mAnimationManager;
+    CCLayer  *pTarget;
 };
 
 #endif /* defined(__TestGame__BaseLayer__) */

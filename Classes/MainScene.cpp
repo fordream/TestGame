@@ -26,7 +26,9 @@ bool MainScene::init()
     {
         CC_BREAK_IF(!CCScene::init());
         
-        MainLayer::create()->show((CCLayer *) this);
+        CCLayer *target = (CCLayer *) this;
+        
+        MainLayer::load(target)->show();
         
         bRet = true;
     } while (0);

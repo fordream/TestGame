@@ -1725,6 +1725,24 @@
 			path = ../Resources;
 			sourceTree = "<group>";
 		};
+		C44F91C019273D6B00460F86 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C49F8EB41921BF65000C86E5 /* MainLayer.cpp */,
+				C49F8EB51921BF65000C86E5 /* MainLayer.h */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		C44F91C119273D7D00460F86 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C47741F019231B8300694FE4 /* PopLayer.cpp */,
+				C47741F119231B8300694FE4 /* PopLayer.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		C49F8EB01921B910000C86E5 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -1737,12 +1755,10 @@
 		C49F8EB11921B918000C86E5 /* Layer */ = {
 			isa = PBXGroup;
 			children = (
-				C49F8EB41921BF65000C86E5 /* MainLayer.cpp */,
-				C49F8EB51921BF65000C86E5 /* MainLayer.h */,
 				C478E1FA192222F2009D8D12 /* BaseLayer.cpp */,
 				C478E1FB192222F2009D8D12 /* BaseLayer.h */,
-				C47741F019231B8300694FE4 /* PopLayer.cpp */,
-				C47741F119231B8300694FE4 /* PopLayer.h */,
+				C44F91C119273D7D00460F86 /* Common */,
+				C44F91C019273D6B00460F86 /* Main */,
 			);
 			name = Layer;
 			sourceTree = "<group>";

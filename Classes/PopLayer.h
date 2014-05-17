@@ -25,7 +25,9 @@ public:
     PopLayer();
     ~PopLayer();
     
-    void show(CCLayer *target = NULL);
+    static PopLayer* load(CCLayer *target);
+    
+    void show();
     void hide();
     
     virtual void onNodeLoaded(CCNode *pNode, CCNodeLoader *pNodeLoader);
@@ -35,12 +37,13 @@ public:
     virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
     
     void registerWithTouchDispatcher();
-    void callBackAnimationCompleted();
+    
     void onClose(CCObject *pSender, CCControlEvent pCCControlEvent);         //Control类按钮执行函数
+    
+    void callBackAnimationCompleted();
 
 private:
-    CCControl    *mCloseBtn;
-    CCLayer      *pTarget;
+    CCControl *mCloseBtn;
 };
 
 /* 声明节点注册器 */

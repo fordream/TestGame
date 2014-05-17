@@ -27,21 +27,15 @@ public:
     
     ~MainLayer();
     
-    //virtual bool init();      //重写init函数
+    static MainLayer* load(CCLayer *target);
     
-    void show(CCLayer *target);
+    void show();
     
     virtual void onNodeLoaded(CCNode *pNode, CCNodeLoader *pNodeLoader);
     
     virtual SEL_CCControlHandler onResolveCCBCCControlSelector(CCObject * pTarget, const char* pSelectorName);   //重写Control类按钮回调函数绑定器
     
     void onClickMe(CCObject *pSender, CCControlEvent pCCControlEvent);         //Control类按钮执行函数
-    
-    //void callBackAnimationCompleted();
-    
-private:
-    PopLayer *pPopLayer;
-    //CCLayer  *target;
     
 };
 

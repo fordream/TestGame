@@ -10,7 +10,6 @@
 
 PopLayer::PopLayer()
 : mCloseBtn(NULL)
-, pTarget(NULL)
 {
     
 }
@@ -21,28 +20,38 @@ PopLayer::~PopLayer()
     CC_SAFE_RELEASE(pTarget);
 }
 
-void PopLayer::show(CCLayer *target)
+PopLayer* PopLayer::load(CCLayer *target)
 {
-    pTarget = (target == NULL) ? this : target;
+    PopLayer *node = (PopLayer *) CCBManage::loadCCB("PopLayer.ccbi", PopLayer::create(), "PopLayer", PopLayerLoader::loader());
     
-    CCNode *node = CCBManage::loadCCB("PopLayer.ccbi", pTarget, "PopLayer", PopLayerLoader::loader());
+    node->setAnimationManager((CCBAnimationManager *) node->getUserObject());
     
-    this->setAnimationManager((CCBAnimationManager *) node->getUserObject());
+    node->pTarget = target;
     
-    this->addChild(node);
-    
+    return node;
+}
+
+void PopLayer::show()
+{
     pTarget->addChild(this);
     
-    CCLOG("%p",this);
+    CCLOG("===show===");
+    CCLOG("this->%p",this);
+    //CCLOG("pTarget->%p",pTarget);
+    CCLOG("mCloseBtn->%p",mCloseBtn);
+    
 }
 
 void PopLayer::hide()
 {
-    CCLOG("%p",this);
+    CCLOG("===hide===");
+    CCLOG("this->%p",this);
+    //CCLOG("pTarget->%p",pTarget);
+    CCLOG("mCloseBtn->%p",mCloseBtn);
     
-    //pTarget->removeChild(this);
-    //mAnimationManager->runAnimationsForSequenceNamed("Display");
-    //mAnimationManager->setAnimationCompletedCallback(this, callfunc_selector(PopLayer::callBackAnimationCompleted));
+    mCloseBtn->setEnabled(false);
+    mAnimationManager->runAnimationsForSequenceNamed("Display");
+    mAnimationManager->setAnimationCompletedCallback(this, callfunc_selector(PopLayer::callBackAnimationCompleted));
 }
 
 void PopLayer::callBackAnimationCompleted()
@@ -51,9 +60,8 @@ void PopLayer::callBackAnimationCompleted()
     
     if (lastSeqName == "Display")
     {
-        //this->getParent()->removeChild(this);
         pTarget->removeChild(this);
-        CCLOG("pPopLayer remove");
+        //CCLOG("pPopLayer remove");
     }
 }
 
@@ -62,11 +70,18 @@ void PopLayer::onNodeLoaded(CCNode *pNode, CCNodeLoader *pNodeLoader)
     CCLOG("PopLayer OnLoad");
     this->setTouchEnabled(true);
     mCloseBtn->setTouchPriority(kCCMenuHandlerPriority * 2);
+    CCLOG("===onNodeLoaded===");
+    CCLOG("this->%p",this);
+    CCLOG("mCloseBtn->%p",mCloseBtn);
+    
 }
 
 bool PopLayer::onAssignCCBMemberVariable(CCObject* pTarget, const char* pMemberVariableName, CCNode* pNode)   //重写ccbi文件成员对象绑定器
 {
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "mCloseBtn", CCControl*, this->mCloseBtn);        //设定成员对象对应变量
+    CCLOG("===onAssignCCBMemberVariable===");
+    CCLOG("this->%p",this);
+    CCLOG("mCloseBtn->%p",mCloseBtn);
     return true;
 }
 
@@ -78,10 +93,13 @@ SEL_CCControlHandler PopLayer::onResolveCCBCCControlSelector(CCObject * pTarget,
 
 void PopLayer::onClose(CCObject *pSender, CCControlEvent pCCControlEvent)
 {
-    hide();
+    this->hide();
     CCLOG("Close Btn Clicked");
 }
 
+/**
+ * 设置触摸等级
+ **/
 void PopLayer::registerWithTouchDispatcher()
 {
 	CCDirector *pDirector = CCDirector::sharedDirector();

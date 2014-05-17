@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../classes/BaseLayer.cpp"
-            timestampString = "421923830.569288"
+            timestampString = "422011850.109252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "BaseLayer::setAnimationManager(CCBAnimationManager *pAnimationManager)"
             landmarkType = "5">
          </BreakpointContent>

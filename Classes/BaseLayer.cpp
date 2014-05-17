@@ -10,6 +10,7 @@
 
 BaseLayer::BaseLayer()
 : mAnimationManager(NULL)
+, pTarget(NULL)
 {
     
 }
@@ -17,6 +18,7 @@ BaseLayer::BaseLayer()
 BaseLayer::~BaseLayer()
 {
     CC_SAFE_RELEASE(mAnimationManager);
+    CC_SAFE_RELEASE(pTarget);
 }
 
 SEL_MenuHandler BaseLayer::onResolveCCBCCMenuItemSelector(CCObject * pTarget, const char* pSelectorName)       //重写Menu类按钮回调函数绑定器
