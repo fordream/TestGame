@@ -51,6 +51,7 @@ public:
 protected:
     CCBAnimationManager *mAnimationManager;
     CCLayer  *pTarget;
+    //std::set<TextrueInfo> mTextrueList;
 };
 
 #endif /* defined(__TestGame__BaseLayer__) */

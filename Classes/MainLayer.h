@@ -13,9 +13,10 @@
 #include "BaseLayer.h"
 #include "PopLayer.h"
 
-
 USING_NS_CC;
 USING_NS_CC_EXT;
+
+
 
 class MainLayer
 : public BaseLayer
@@ -36,7 +37,6 @@ public:
     virtual SEL_CCControlHandler onResolveCCBCCControlSelector(CCObject * pTarget, const char* pSelectorName);   //重写Control类按钮回调函数绑定器
     
     void onClickMe(CCObject *pSender, CCControlEvent pCCControlEvent);         //Control类按钮执行函数
-    
 };
 
 /* 声明节点注册器 */

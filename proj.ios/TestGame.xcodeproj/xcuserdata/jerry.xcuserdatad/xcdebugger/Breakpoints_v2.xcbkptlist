@@ -9,14 +9,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Classes/MainScene.h"
-            timestampString = "421732423.289673"
+            filePath = "../../../extensions/CCBReader/CCNodeLoader.cpp"
+            timestampString = "422161475.53825"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "class MainScene"
-            landmarkType = "3">
+            startingLineNumber = "577"
+            endingLineNumber = "577"
+            landmarkName = "CCNodeLoader::parsePropTypeSpriteFrame(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader, const char *pPropertyName)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,14 +25,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../classes/BaseLayer.cpp"
-            timestampString = "422011850.109252"
+            filePath = "../Classes/LoadingLayer.h"
+            timestampString = "422174300.574755"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "BaseLayer::setAnimationManager(CCBAnimationManager *pAnimationManager)"
-            landmarkType = "5">
+            startingLineNumber = "41"
+            endingLineNumber = "41">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

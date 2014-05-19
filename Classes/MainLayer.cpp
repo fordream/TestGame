@@ -31,6 +31,7 @@ MainLayer* MainLayer::load(CCLayer *target)
 
 void MainLayer::show()
 {
+    //CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("ccbDefaultImages.plist");
     pTarget->addChild(this);
     
     CCLOG("===show===");

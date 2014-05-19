@@ -11,6 +11,7 @@
 
 #include "cocos2d.h"
 #include "MainLayer.h"
+#include "LoadingLayer.h"
 
 USING_NS_CC;
 
@@ -25,8 +26,6 @@ public:
     virtual bool init();      //重写init函数
     
     CREATE_FUNC(MainScene);   //创建create函数
-    
-    MainLayer *pMainLayer;
 };
 
 

@@ -16,7 +16,6 @@ USING_NS_CC;
 USING_NS_CC_EXT;
 
 class CCBManage
-: public CCLayer
 {
 public:
     static CCNode *loadCCB(const char * pCCBFileName, CCLayer *pCCLayer, const char * pCCNodeName = NULL, CCNodeLoader * pCCNodeLoader = NULL);

@@ -9,14 +9,12 @@
 #include "MainScene.h"
 
 MainScene::MainScene()
-: pMainLayer(NULL)
 {
     
 }
 
 MainScene::~MainScene()
 {
-    CC_SAFE_RELEASE(pMainLayer);
 }
 
 bool MainScene::init()
@@ -28,7 +26,7 @@ bool MainScene::init()
         
         CCLayer *target = (CCLayer *) this;
         
-        MainLayer::load(target)->show();
+        LoadingLayer::load(target)->show();
         
         bRet = true;
     } while (0);

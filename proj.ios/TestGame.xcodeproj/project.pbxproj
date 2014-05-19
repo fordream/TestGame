@@ -226,6 +226,13 @@
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		C41FE0C91929D73A00B5C881 /* LoadingLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = C41FE0C81929D73A00B5C881 /* LoadingLayer.ccbi */; };
+		C41FE0CC1929D79000B5C881 /* LoadingLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C41FE0CA1929D79000B5C881 /* LoadingLayer.cpp */; };
+		C41FE0D41929EC8600B5C881 /* test1.png in Resources */ = {isa = PBXBuildFile; fileRef = C41FE0CF1929EC8600B5C881 /* test1.png */; };
+		C41FE0D51929EC8600B5C881 /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = C41FE0D01929EC8600B5C881 /* test2.png */; };
+		C41FE0D61929EC8600B5C881 /* test3.png in Resources */ = {isa = PBXBuildFile; fileRef = C41FE0D11929EC8600B5C881 /* test3.png */; };
+		C41FE0D71929EC8600B5C881 /* test4.png in Resources */ = {isa = PBXBuildFile; fileRef = C41FE0D21929EC8600B5C881 /* test4.png */; };
+		C41FE0D81929EC8600B5C881 /* test5.png in Resources */ = {isa = PBXBuildFile; fileRef = C41FE0D31929EC8600B5C881 /* test5.png */; };
 		C47741EF192306D100694FE4 /* PopLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = C47741EE192306D100694FE4 /* PopLayer.ccbi */; };
 		C47741F219231B8300694FE4 /* PopLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47741F019231B8300694FE4 /* PopLayer.cpp */; };
 		C478E1F51921EC4C009D8D12 /* ccbResources in Resources */ = {isa = PBXBuildFile; fileRef = C478E1F31921EC4C009D8D12 /* ccbResources */; };
@@ -715,6 +722,14 @@
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C41FE0C81929D73A00B5C881 /* LoadingLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = LoadingLayer.ccbi; sourceTree = "<group>"; };
+		C41FE0CA1929D79000B5C881 /* LoadingLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LoadingLayer.cpp; path = ../Classes/LoadingLayer.cpp; sourceTree = "<group>"; };
+		C41FE0CB1929D79000B5C881 /* LoadingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingLayer.h; path = ../Classes/LoadingLayer.h; sourceTree = "<group>"; };
+		C41FE0CF1929EC8600B5C881 /* test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test1.png; sourceTree = "<group>"; };
+		C41FE0D01929EC8600B5C881 /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
+		C41FE0D11929EC8600B5C881 /* test3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test3.png; sourceTree = "<group>"; };
+		C41FE0D21929EC8600B5C881 /* test4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test4.png; sourceTree = "<group>"; };
+		C41FE0D31929EC8600B5C881 /* test5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test5.png; sourceTree = "<group>"; };
 		C47741EE192306D100694FE4 /* PopLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = PopLayer.ccbi; sourceTree = "<group>"; };
 		C47741F019231B8300694FE4 /* PopLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PopLayer.cpp; path = ../Classes/PopLayer.cpp; sourceTree = "<group>"; };
 		C47741F119231B8300694FE4 /* PopLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopLayer.h; path = ../Classes/PopLayer.h; sourceTree = "<group>"; };
@@ -1713,6 +1728,12 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C41FE0CF1929EC8600B5C881 /* test1.png */,
+				C41FE0D01929EC8600B5C881 /* test2.png */,
+				C41FE0D11929EC8600B5C881 /* test3.png */,
+				C41FE0D21929EC8600B5C881 /* test4.png */,
+				C41FE0D31929EC8600B5C881 /* test5.png */,
+				C41FE0C81929D73A00B5C881 /* LoadingLayer.ccbi */,
 				C47741EE192306D100694FE4 /* PopLayer.ccbi */,
 				C478E1F31921EC4C009D8D12 /* ccbResources */,
 				C478E1F41921EC4C009D8D12 /* MainLayer.ccbi */,
@@ -1739,6 +1760,8 @@
 			children = (
 				C47741F019231B8300694FE4 /* PopLayer.cpp */,
 				C47741F119231B8300694FE4 /* PopLayer.h */,
+				C41FE0CA1929D79000B5C881 /* LoadingLayer.cpp */,
+				C41FE0CB1929D79000B5C881 /* LoadingLayer.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1844,11 +1867,17 @@
 				C47741EF192306D100694FE4 /* PopLayer.ccbi in Resources */,
 				D4EF949A15BD2D8B00D803EB /* Icon-57.png in Resources */,
 				D4EF949C15BD2D8E00D803EB /* Icon-114.png in Resources */,
+				C41FE0D51929EC8600B5C881 /* test2.png in Resources */,
+				C41FE0D41929EC8600B5C881 /* test1.png in Resources */,
 				D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */,
 				C478E1F51921EC4C009D8D12 /* ccbResources in Resources */,
+				C41FE0D81929EC8600B5C881 /* test5.png in Resources */,
 				C478E1F61921EC4C009D8D12 /* MainLayer.ccbi in Resources */,
+				C41FE0D71929EC8600B5C881 /* test4.png in Resources */,
+				C41FE0C91929D73A00B5C881 /* LoadingLayer.ccbi in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
+				C41FE0D61929EC8600B5C881 /* test3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1867,6 +1896,7 @@
 				15A3D9041682F7D5002FB0C5 /* b2Distance.cpp in Sources */,
 				15A3D9051682F7D5002FB0C5 /* b2DynamicTree.cpp in Sources */,
 				15A3D9061682F7D5002FB0C5 /* b2TimeOfImpact.cpp in Sources */,
+				C41FE0CC1929D79000B5C881 /* LoadingLayer.cpp in Sources */,
 				15A3D9071682F7D5002FB0C5 /* b2ChainShape.cpp in Sources */,
 				15A3D9081682F7D5002FB0C5 /* b2CircleShape.cpp in Sources */,
 				15A3D9091682F7D5002FB0C5 /* b2EdgeShape.cpp in Sources */,
